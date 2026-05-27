@@ -1,0 +1,69 @@
+---
+import { t, languages, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const tr = t(lang);
+
+const navLinks = [
+  { label: tr.nav.home, href: `/${lang === 'en' ? '' : lang + '/'}` },
+  { label: tr.nav.about, href: `/${lang === 'en' ? '' : lang + '/'}#about` },
+  { label: tr.nav.testimonials, href: `/${lang === 'en' ? '' : lang + '/'}#testimonials` },
+  { label: tr.nav.contact, href: `/${lang === 'en' ? '' : lang + '/'}#contact` },
+];
+
+const langSwitcher = Object.entries(languages) as [Lang, string][];
+---
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+    <!-- Logo -->
+    <a href={lang === 'en' ? '/' : `/${lang}/`} class="font-bold text-xl text-blue-700 tracking-tight">
+      Top Class <span class="font-normal text-gray-500">Driving School</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+      {navLinks.map(link => (
+        <a href={link.href} class="hover:text-blue-700 transition-colors">{link.label}</a>
+      ))}
+    </nav>
+
+    <!-- Language switcher + mobile toggle -->
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-1 text-sm">
+        {langSwitcher.map(([code, label]) => (
+          <a
+            href={code === 'en' ? '/' : `/${code}/`}
+            class={`px-2 py-1 rounded transition-colors ${lang === code ? 'bg-blue-700 text-white font-semibold' : 'text-gray-500 hover:text-blue-700'}`}
+          >
+            {code === 'en' ? 'EN' : code === 'zh-HK' ? '廣' : '普'}
+          </a>
+        ))}
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="menu-btn" class="md:hidden p-2 text-gray-600" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-4 pb-4">
+    {navLinks.map(link => (
+      <a href={link.href} class="block py-2 text-gray-700 hover:text-blue-700 font-medium">{link.label}</a>
+    ))}
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+</script>

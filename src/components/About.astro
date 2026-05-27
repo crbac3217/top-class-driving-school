@@ -1,0 +1,71 @@
+---
+import { t, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const tr = t(lang);
+
+const badges = [
+  { icon: '🪪', text: tr.about.badge1 },
+  { icon: '🚗', text: tr.about.badge2 },
+  { icon: '📍', text: tr.about.badge3 },
+  { icon: '💬', text: tr.about.badge4 },
+];
+---
+
+<section id="about" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">{tr.about.title}</h2>
+        <p class="text-gray-600 text-lg leading-relaxed mb-8">{tr.about.body}</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {badges.map(b => (
+            <div class="flex items-center gap-3 bg-white rounded-xl px-4 py-3 shadow-sm border border-gray-100">
+              <span class="text-xl">{b.icon}</span>
+              <span class="text-sm font-medium text-gray-700">{b.text}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Visual card -->
+      <div class="flex justify-center">
+        <div class="bg-gradient-to-br from-blue-700 to-blue-900 text-white rounded-3xl p-8 shadow-xl max-w-sm w-full flex flex-col gap-6">
+          <div class="text-4xl font-extrabold">Top Class<br/>Driving School</div>
+          <div class="h-px bg-white/20"></div>
+          <ul class="flex flex-col gap-3 text-blue-100 text-sm">
+            <li class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              ICBC Licensed — Motor Vehicle Act
+            </li>
+            <li class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              Class 5 &amp; Class 7 Lessons
+            </li>
+            <li class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              Door-to-Door Service
+            </li>
+            <li class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              English · Cantonese · Mandarin
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

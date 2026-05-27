@@ -1,0 +1,112 @@
+---
+import { t, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const tr = t(lang);
+const mapsUrl = 'https://maps.app.goo.gl/fmeyGGwCf7P4To4y9';
+
+const reviews = [
+  {
+    name: 'VG G',
+    text: 'Cleared my road test on the first attempt. Keith teaches things no other instructor does — small but powerful details that make all the difference. Patient, kind, and 100% recommend.',
+  },
+  {
+    name: 'Megha Suresh',
+    text: "Keith's patience, encouragement, and practical tips helped me feel confident and fully prepared. Passed my driving test successfully. Would absolutely recommend!",
+  },
+  {
+    name: 'Malvika Singh',
+    text: 'Very patient and supportive, especially for beginners. Covered every fundamental clearly and made sure I understood each step before moving on. Built real confidence behind the wheel.',
+  },
+  {
+    name: 'Ayush Joshi',
+    text: 'Highly professional and methodical. Quickly identifies root causes of mistakes and corrects them effectively. Provides a detailed debrief after each lesson. Highly recommend.',
+  },
+  {
+    name: 'Olawumi Ojewale',
+    text: 'Passed my driving test in just one shot. Keith is calm, patient, detailed, and very punctual. Top Class Driving School is the best.',
+  },
+  {
+    name: 'Ho Ho',
+    text: 'Professional, patient, and experienced. Unique teaching skills took me from driving anxiety to confident. Truly and highly recommended.',
+  },
+  {
+    name: 'Shirley Yin',
+    text: "Keith helped me overcome driving anxiety I'd had for years. Explained procedures clearly and helped me understand my mistakes in the moment. A lot more comfortable driving now.",
+  },
+  {
+    name: 'Rand Araim',
+    text: 'Helpful, professional, accurate, and patient. Passed my Class 5 road test on the first attempt. Thank you for giving me my confidence back.',
+  },
+  {
+    name: 'Xinyi Ma',
+    text: 'Patient, knowledgeable, and professional. Clearly explains techniques and points out mistakes with kindness and detail. Improved quickly with Keith\'s guidance.',
+  },
+  {
+    name: 'Coco Zhao',
+    text: 'Points out mistakes from the root and explains techniques in a way that\'s easy to understand. Passed with just a few classes at an affordable price. 10/10 — would recommend to friends.',
+  },
+];
+---
+
+<section id="testimonials" class="py-20 bg-white overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 mb-10">
+    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 text-center">{tr.testimonials.title}</h2>
+  </div>
+
+  <!-- Marquee wrapper -->
+  <div class="relative">
+    <!-- Left fade -->
+    <div class="absolute left-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
+    <!-- Right fade -->
+    <div class="absolute right-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+
+    <div class="marquee-track flex gap-6 w-max">
+      <!-- Render twice for seamless loop -->
+      {[...reviews, ...reviews].map(r => (
+        <div class="bg-gray-50 rounded-2xl p-6 shadow-sm flex flex-col gap-4 w-72 shrink-0">
+          <div class="flex gap-1 text-yellow-400">
+            {Array(5).fill(null).map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.05 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z" />
+              </svg>
+            ))}
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed flex-1">"{r.text}"</p>
+          <span class="font-semibold text-gray-900 text-sm">&mdash; {r.name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="text-center mt-10">
+    <a
+      href={mapsUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 border border-gray-300 text-gray-700 font-medium px-6 py-3 rounded-lg hover:border-blue-500 hover:text-blue-700 transition-colors"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+      </svg>
+      {tr.testimonials.cta}
+    </a>
+  </div>
+</section>
+
+<style>
+  .marquee-track {
+    animation: marquee 50s linear infinite;
+  }
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+</style>

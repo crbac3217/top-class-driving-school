@@ -1,0 +1,47 @@
+---
+import { t, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const tr = t(lang);
+const mapsUrl = 'https://maps.app.goo.gl/fmeyGGwCf7P4To4y9';
+---
+
+<section id="map" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">{tr.map.title}</h2>
+      <p class="text-gray-500">{tr.map.subtitle}</p>
+    </div>
+
+    <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.4!2d-122.8817024!3d49.2599526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xac2c94345c71f7b7%3A0xf98614dcb86566d4!2sTop%20Class%20Driving%20School!5e0!3m2!1sen!2sca!4v1"
+        width="100%"
+        height="420"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Top Class Driving School on Google Maps"
+      ></iframe>
+    </div>
+
+    <div class="text-center mt-6">
+      <a
+        href={mapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-blue-700 hover:text-blue-900 font-medium transition-colors"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+        {tr.map.link}
+      </a>
+    </div>
+  </div>
+</section>
