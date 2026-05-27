@@ -8,11 +8,14 @@ interface Props {
 const { lang } = Astro.props;
 const tr = t(lang);
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const prefix = lang === 'en' ? `${base}/` : `${base}/${lang}/`;
+
 const navLinks = [
-  { label: tr.nav.home, href: `/${lang === 'en' ? '' : lang + '/'}` },
-  { label: tr.nav.about, href: `/${lang === 'en' ? '' : lang + '/'}#about` },
-  { label: tr.nav.testimonials, href: `/${lang === 'en' ? '' : lang + '/'}#testimonials` },
-  { label: tr.nav.contact, href: `/${lang === 'en' ? '' : lang + '/'}#contact` },
+  { label: tr.nav.home, href: prefix },
+  { label: tr.nav.about, href: `${prefix}#about` },
+  { label: tr.nav.testimonials, href: `${prefix}#testimonials` },
+  { label: tr.nav.contact, href: `${prefix}#contact` },
 ];
 
 const langSwitcher = Object.entries(languages) as [Lang, string][];
@@ -21,7 +24,7 @@ const langSwitcher = Object.entries(languages) as [Lang, string][];
 <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
     <!-- Logo -->
-    <a href={lang === 'en' ? '/' : `/${lang}/`} class="font-bold text-xl text-blue-700 tracking-tight">
+    <a href={prefix} class="font-bold text-xl text-blue-700 tracking-tight">
       Top Class <span class="font-normal text-gray-500">Driving School</span>
     </a>
 
@@ -37,7 +40,7 @@ const langSwitcher = Object.entries(languages) as [Lang, string][];
       <div class="flex items-center gap-1 text-sm">
         {langSwitcher.map(([code, label]) => (
           <a
-            href={code === 'en' ? '/' : `/${code}/`}
+            href={code === 'en' ? `${base}/` : `${base}/${code}/`}
             class={`px-2 py-1 rounded transition-colors ${lang === code ? 'bg-blue-700 text-white font-semibold' : 'text-gray-500 hover:text-blue-700'}`}
           >
             {code === 'en' ? 'EN' : code === 'zh-HK' ? '廣' : '普'}
