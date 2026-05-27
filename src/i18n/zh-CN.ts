@@ -7,7 +7,7 @@ export default {
   },
   hero: {
     headline: '由专业教练带你自信上路',
-    subheadline: 'ICBC持牌教练Keith，提供5号及7号牌驾驶课程，以英文、广东话或普通话授课。大温哥华地区上门接送服务。',
+    subheadline: 'ICBC持牌教练Keith，提供5号及7号牌驾驶课程，以英文、广东话或普通话授课。高贵林及本拿比地区上门接送服务。',
     cta: 'WhatsApp 预约',
     ctaSecondary: '致电',
   },
@@ -44,7 +44,7 @@ export default {
     call: '致电',
     phone: '+17788916091',
     email: 'topclassdrivingschool@email.com',
-    note: '大温哥华地区均提供上门接送服务。',
+    note: '高贵林及本拿比地区均提供上门接送服务。',
   },
   map: {
     title: '在 Google 地图找我们',

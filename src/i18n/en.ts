@@ -7,7 +7,7 @@ export default {
   },
   hero: {
     headline: 'Drive with Confidence — Learn from a Pro',
-    subheadline: 'ICBC-licensed Class 5 & 7 driving lessons in English, Cantonese & Mandarin. Door-to-door service across Metro Vancouver.',
+    subheadline: 'ICBC-licensed Class 5 & 7 driving lessons in English, Cantonese & Mandarin. Door-to-door service across Coquitlam and Burnaby.',
     cta: 'Book via WhatsApp',
     ctaSecondary: 'Call',
   },
@@ -44,7 +44,7 @@ export default {
     call: 'Call',
     phone: '+17788916091',
     email: 'topclassdrivingschool@email.com',
-    note: 'Door-to-door lessons available across Metro Vancouver.',
+    note: 'Door-to-door lessons available across Coquitlam and Burnaby.',
   },
   map: {
     title: 'Find Us on Google Maps',
