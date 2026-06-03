@@ -17,8 +17,9 @@ export default {
     difficulties: [
       'Hitting the corner during right turns',
       'Cutting the centre line during left turns',
-      'Forgetting to check mirrors and blind spots',
-      'Managing speed near intersections and school zones',
+      'Reverse stall parking, parallel parking & front-in parking',
+      'Not knowing what to do at traffic lights and intersections',
+      'Panicking when changing lanes',
     ],
     badge1: 'ICBC Licensed Instructor',
     badge2: 'Class 5 & 7 Lessons',
@@ -45,7 +46,7 @@ export default {
   },
   contact: {
     title: 'Book a Lesson',
-    subtitle: 'Call or message on WhatsApp to check availability and get started.',
+    subtitle: 'Call or message on WhatsApp to check rates and availability.',
     callSms: 'Call & SMS',
     whatsapp: 'WhatsApp',
     call: 'Call',

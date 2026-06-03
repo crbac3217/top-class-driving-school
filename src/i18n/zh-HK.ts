@@ -7,7 +7,7 @@ export default {
   },
   hero: {
     headline: '由專業教練帶你自信上路',
-    subheadline: 'ICBC持牌教練Keith，提供5號及7號牌駕駛課程，以英文、廣東話或普通話授課。服務三城地區（高貴林、屏特美、高貴林港）、本拿比及新西敏，提供上門接送服務。',
+    subheadline: 'ICBC持牌教練Keith，提供5號及7號牌駕駛課程，以英文、廣東話或普通話授課。服務三城地區（高貴林、砵務美、高貴林港）、本拿比及新西敏，提供上門接送服務。',
     cta: '致電 & 短訊',
     ctaSecondary: 'WhatsApp',
   },
@@ -17,8 +17,9 @@ export default {
     difficulties: [
       '右轉時擦碰路緣或角位',
       '左轉時切入對面行車線',
-      '忘記查看後視鏡及盲點',
-      '在交叉路口及學校區控制車速',
+      '後泊車位、平行泊車及前泊入位',
+      '在交通燈路口不知所措',
+      '轉線時感到慌亂',
     ],
     badge1: 'ICBC 持牌教練',
     badge2: '5號及7號牌課程',
@@ -45,7 +46,7 @@ export default {
   },
   contact: {
     title: '預約課堂',
-    subtitle: '致電或 WhatsApp 查詢空檔及預約詳情。',
+    subtitle: '致電或 WhatsApp 查詢收費及空檔。',
     callSms: '致電 & 短訊',
     whatsapp: 'WhatsApp',
     call: '致電',
