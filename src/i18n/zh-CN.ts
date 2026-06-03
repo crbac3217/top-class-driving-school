@@ -7,13 +7,19 @@ export default {
   },
   hero: {
     headline: '由专业教练带你自信上路',
-    subheadline: 'ICBC持牌教练Keith，提供5号及7号牌驾驶课程，以英文、广东话或普通话授课。高贵林及本拿比地区上门接送服务。',
-    cta: 'WhatsApp 预约',
-    ctaSecondary: '致电',
+    subheadline: 'ICBC持牌教练Keith，提供5号及7号牌驾驶课程，以英文、广东话或普通话授课。服务三城地区（高贵林、屏特美、高贵林港）、本拿比及新西敏，提供上门接送服务。',
+    cta: '致电 & 短信',
+    ctaSecondary: 'WhatsApp',
   },
   about: {
     title: '关于 Top Class Driving School',
-    body: 'Top Class Driving School 由持牌ICBC教练Keith主理，依据机动车辆法例认证。专门提供5号及7号牌驾驶课程，以英文、广东话或普通话授课，让你用最熟悉的语言学习。课程直接在你门口开始，轻松无压力上路。',
+    body: 'Keith 拥有丰富经验及独特的教学方法，帮助你克服驾驶中遇到的各种困难。常见的学员挑战包括：',
+    difficulties: [
+      '右转时擦碰路缘或角位',
+      '左转时切入对向车道',
+      '忘记查看后视镜及盲区',
+      '在路口及学校区控制车速',
+    ],
     badge1: 'ICBC 持牌教练',
     badge2: '5号及7号牌课程',
     badge3: '上门接送服务',
@@ -40,11 +46,13 @@ export default {
   contact: {
     title: '预约课程',
     subtitle: '致电或 WhatsApp 查询空档及预约详情。',
+    callSms: '致电 & 短信',
     whatsapp: 'WhatsApp',
     call: '致电',
     phone: '+17788916091',
+    phoneDisplay: '+1 778-891-6091',
     email: 'topclassdrivingschool@email.com',
-    note: '高贵林及本拿比地区均提供上门接送服务。',
+    note: '服务三城、本拿比及新西敏地区，提供上门接送服务。',
   },
   map: {
     title: '在 Google 地图找我们',

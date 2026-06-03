@@ -7,13 +7,19 @@ export default {
   },
   hero: {
     headline: 'Drive with Confidence — Learn from a Pro',
-    subheadline: 'ICBC-licensed Class 5 & 7 driving lessons in English, Cantonese & Mandarin. Door-to-door service across Coquitlam and Burnaby.',
-    cta: 'Book via WhatsApp',
-    ctaSecondary: 'Call',
+    subheadline: 'ICBC-licensed Class 5 & 7 driving lessons in English, Cantonese & Mandarin. Door-to-door service across Tri-Cities (Coquitlam, Port Moody, Port Coquitlam), Burnaby, and New Westminster.',
+    cta: 'Call & SMS',
+    ctaSecondary: 'WhatsApp',
   },
   about: {
     title: 'About Top Class Driving School',
-    body: 'Top Class Driving School is led by Keith, a dedicated ICBC-licensed driving instructor certified under the Motor Vehicle Act. Specializing in Class 5 and Class 7 lessons, Keith teaches in English, Cantonese, and Mandarin — so you can learn in the language you\'re most comfortable with. Lessons start right at your door, making it easy and stress-free to get behind the wheel.',
+    body: 'Keith has years of experience and unique methods to help you overcome every difficulty you encounter while driving. Common challenges he helps students tackle:',
+    difficulties: [
+      'Hitting the corner during right turns',
+      'Cutting the centre line during left turns',
+      'Forgetting to check mirrors and blind spots',
+      'Managing speed near intersections and school zones',
+    ],
     badge1: 'ICBC Licensed Instructor',
     badge2: 'Class 5 & 7 Lessons',
     badge3: 'Door-to-Door Service',
@@ -40,11 +46,13 @@ export default {
   contact: {
     title: 'Book a Lesson',
     subtitle: 'Call or message on WhatsApp to check availability and get started.',
+    callSms: 'Call & SMS',
     whatsapp: 'WhatsApp',
     call: 'Call',
     phone: '+17788916091',
+    phoneDisplay: '+1 778-891-6091',
     email: 'topclassdrivingschool@email.com',
-    note: 'Door-to-door lessons available across Coquitlam and Burnaby.',
+    note: 'Door-to-door lessons across Tri-Cities, Burnaby & New Westminster.',
   },
   map: {
     title: 'Find Us on Google Maps',

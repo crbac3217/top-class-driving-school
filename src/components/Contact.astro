@@ -17,7 +17,19 @@ const telHref = `tel:${phone.replace(/\s/g, '')}`;
     <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{tr.contact.title}</h2>
     <p class="text-gray-500 mb-10">{tr.contact.subtitle}</p>
 
+    <p class="text-2xl font-bold text-gray-800 mb-6 tracking-wide">{tr.contact.phoneDisplay}</p>
+
     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+      <a
+        href={telHref}
+        class="flex items-center justify-center gap-3 bg-blue-700 hover:bg-blue-800 text-white font-bold px-8 py-4 rounded-xl transition-colors shadow-md text-lg"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+        </svg>
+        {tr.contact.callSms}
+      </a>
+
       <a
         href={waHref}
         target="_blank"
@@ -29,16 +41,6 @@ const telHref = `tel:${phone.replace(/\s/g, '')}`;
           <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.528 5.847L.057 23.571a.75.75 0 00.92.921l5.701-1.465A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.724 9.724 0 01-4.964-1.358l-.355-.212-3.684.947.978-3.595-.232-.37A9.714 9.714 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
         </svg>
         {tr.contact.whatsapp}
-      </a>
-
-      <a
-        href={telHref}
-        class="flex items-center justify-center gap-3 bg-blue-700 hover:bg-blue-800 text-white font-bold px-8 py-4 rounded-xl transition-colors shadow-md text-lg"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-        </svg>
-        {tr.contact.call}
       </a>
     </div>
 

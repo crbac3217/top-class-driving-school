@@ -21,7 +21,17 @@ const badges = [
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div>
         <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">{tr.about.title}</h2>
-        <p class="text-gray-600 text-lg leading-relaxed mb-8">{tr.about.body}</p>
+        <p class="text-gray-600 text-lg leading-relaxed mb-4">{tr.about.body}</p>
+        <ul class="mb-8 flex flex-col gap-2">
+          {tr.about.difficulties.map((item: string) => (
+            <li class="flex items-start gap-2 text-gray-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {badges.map(b => (
@@ -38,32 +48,29 @@ const badges = [
         <div class="bg-gradient-to-br from-blue-700 to-blue-900 text-white rounded-3xl p-8 shadow-xl max-w-sm w-full flex flex-col gap-6">
           <div class="text-4xl font-extrabold">Top Class<br/>Driving School</div>
           <div class="h-px bg-white/20"></div>
-          <ul class="flex flex-col gap-3 text-blue-100 text-sm">
-            <li class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
-              ICBC Licensed — Motor Vehicle Act
-            </li>
-            <li class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
-              Class 5 &amp; Class 7 Lessons
-            </li>
-            <li class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
-              Door-to-Door Service
-            </li>
-            <li class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
-              English · Cantonese · Mandarin
-            </li>
-          </ul>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-3">Road Test Centers</p>
+            <ul class="flex flex-col gap-4 text-blue-100 text-sm">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+                <span><span class="text-white font-medium">Lougheed Hwy ICBC</span><br/>Burnaby</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+                <span><span class="text-white font-medium">ICBC Wayburne Claim Centre</span><br/>Burnaby</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+                <span><span class="text-white font-medium">Coquitlam ICBC Driver Licensing</span><br/>Coquitlam</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
