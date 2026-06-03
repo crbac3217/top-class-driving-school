@@ -7,7 +7,7 @@ export default {
   },
   hero: {
     headline: '由专业教练带你自信上路',
-    subheadline: 'ICBC持牌教练Keith，提供5号及7号牌驾驶课程，以英文、广东话或普通话授课。服务三城地区（高贵林、砵务美、高贵林港）、本拿比及新西敏，提供上门接送服务。',
+    subheadline: 'ICBC持牌教练Keith，提供5号及7号牌驾驶课程，以英文、广东话或普通话授课。服务三城地区（高贵林、满地宝、高贵林港）、本拿比及新西敏，提供上门接送服务。',
     cta: '致电 & 短信',
     ctaSecondary: 'WhatsApp',
   },
